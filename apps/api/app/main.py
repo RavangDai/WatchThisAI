@@ -30,3 +30,4 @@ STATIC_DIR.mkdir(parents=True, exist_ok=True)
 POSTERS_DIR.mkdir(parents=True, exist_ok=True)
 
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+app.include_router(api_router, prefix="/api/v1")

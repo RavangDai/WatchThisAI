@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+}
+
 :root {
   --background: 0 0% 0%;
   --foreground: 0 0% 100%;
@@ -27,4 +32,9 @@ body {
 body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
 }

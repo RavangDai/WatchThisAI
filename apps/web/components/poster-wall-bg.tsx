@@ -143,8 +143,10 @@ export default function PosterWallBackground({
         </div>
 
         {/* Overall vignette + readability layers (NO blur) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/75" />
-        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_30%_20%,rgba(255,255,255,0.06),transparent_60%)]" />
+        {/* Overall vignette + readability layers (NO blur) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black/95" />
+        <div className="absolute inset-0 bg-black/60" /> {/* Extra dimming layer */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_120%)] opacity-80" />
       </div>
     </div>
   );

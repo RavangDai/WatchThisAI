@@ -40,6 +40,16 @@ def main():
 
                 title, year = parse_title_year(raw_title)
 
+                import random
+                
+                # Random popularity for "Trending" simulation
+                popularity = round(random.uniform(1.0, 100.0), 1)
+                
+                # Dynamic placeholder poster
+                # Using a dark themed placeholder with the title
+                encoded_title = title.replace(" ", "+")
+                poster_url = f"https://placehold.co/600x900/1a1a1a/ffffff.png?text={encoded_title}&font=montserrat"
+
                 db.add(
                     Movie(
                         id=movie_id,
@@ -47,8 +57,9 @@ def main():
                         year=year,
                         genres=genres,
                         overview=None,
-                        popularity=0.0,
+                        popularity=popularity,
                         embedding=None,
+                        poster_path=poster_url
                     )
                 )
                 count += 1

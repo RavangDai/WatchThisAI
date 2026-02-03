@@ -3,3 +3,6 @@ from app.models.movie import Movie
 from app.models.user import User
 from app.models.interaction import Interaction
 
+from app.models.movie import Movie
+from app.models.user import User
+from app.models.interaction import Interaction
